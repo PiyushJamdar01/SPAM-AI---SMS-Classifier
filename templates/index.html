@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+  <html lang="en">
+
+   <head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Spam AI — SMS Classifier</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+        <!-- Heading -->
+        <h1>🛡️ Spam AI - SMS Classifier</h1>
+
+        <p class="subtitle">
+            Enter an SMS message to check whether it is Spam or Safe
+        </p>
+
+        <!-- User Input -->
+        <textarea
+            id="message"
+            placeholder="Type your SMS message here..."></textarea>
+
+        <!-- Predict Button -->
+        <button id="predict-btn">
+            Check Message
+        </button>
+
+        <!-- Prediction Result -->
+        <div id="result"></div>
+
+        <!-- History -->
+        <a href="/history" class="history-link">
+            📋 View Prediction History
+        </a>
+
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+  </body>
+
+  </html>

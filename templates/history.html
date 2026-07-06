@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Prediction History</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="history-container">
+
+        <h1>📋 Prediction History</h1>
+
+<table>
+
+    <thead>
+
+        <tr>
+
+            <th>S.No</th>
+
+            <th>Original Message</th>
+
+            <th>Cleaned Message</th>
+
+            <th>Prediction</th>
+
+            <th>Confidence</th>
+
+            <th>Timestamp</th>
+
+         </tr>
+
+    </thead>
+
+<tbody>
+
+    {% if records %}
+
+        {% for record in records %}
+
+        <tr>
+
+            <td>{{ loop.index }}</td>
+
+            <td>{{ record.message }}</td>
+
+            <td>{{ record.cleaned }}</td>
+
+            <td>
+
+              {% if record.label == "SPAM" %}
+
+                <span class="spam-badge">
+                   🚨 SPAM
+                 </span>
+
+              {% else %}
+
+                 <span class="ham-badge">
+                 ✅ SAFE
+                </span>
+
+              {% endif %}
+
+            </td>
+
+            <td>{{ record.confidence }}%</td>
+
+            <td>{{ record.timestamp }}</td>
+
+        </tr>
+
+        {% endfor %}
+
+    {% else %}
+
+        <tr>
+
+            <td colspan="6"  class="no-history">
+
+                No prediction history available.
+
+            </td>
+
+        </tr>
+
+    {% endif %}
+
+</tbody>
+
+</table>
+
+        <br>
+
+        <a href="/" class="back-link">
+    ⬅ Back to Home
+        </a>
+
+    </div>
+
+</body>
+
+</html>

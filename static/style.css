@@ -1,0 +1,346 @@
+/* ===========================
+   GENERAL
+=========================== */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* ===========================
+   CARD
+=========================== */
+
+.container {
+    width: 500px;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* ===========================
+   TITLE
+=========================== */
+
+h1 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: gray;
+    margin-bottom: 25px;
+}
+
+/* ===========================
+   TEXTAREA
+=========================== */
+
+textarea {
+
+    width: 100%;
+    height: 120px;
+
+    padding: 12px;
+
+    font-size: 15px;
+
+    border: 2px solid #ddd;
+
+    border-radius: 8px;
+
+    resize: none;
+
+    box-sizing: border-box;
+
+}
+
+textarea:focus {
+
+    outline: none;
+
+    border-color: #007bff;
+
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+button {
+
+    width: 100%;
+
+    margin-top: 15px;
+
+    padding: 12px;
+
+    background: #007bff;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+button:hover {
+
+    background: #0056b3;
+
+}
+
+/* ===========================
+   RESULT
+=========================== */
+
+#result {
+
+    display: none;
+
+    margin-top: 20px;
+
+    padding: 20px;
+
+    border-radius: 8px;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+}
+
+.spam {
+
+    background: #ffcccc;
+
+    color: #cc0000;
+
+    border: 2px solid #cc0000;
+
+}
+
+.safe {
+
+    background: #ccffcc;
+
+    color: #006600;
+
+    border: 2px solid #006600;
+
+}
+
+/* ===========================
+   HISTORY LINK
+=========================== */
+
+.history-link {
+
+    display: block;
+
+    margin-top: 20px;
+
+    text-decoration: none;
+
+    color: #007bff;
+
+    font-size: 14px;
+
+}
+
+.history-link:hover {
+
+    text-decoration: underline;
+
+}
+
+
+/* ===========================
+   HISTORY PAGE
+=========================== */
+
+.history-container {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: 40px auto;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+
+}
+
+.history-container h1 {
+
+    text-align: center;
+
+    margin-bottom: 25px;
+
+}
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+}
+
+table th {
+
+    background: #007bff;
+
+    color: white;
+
+    padding: 12px;
+
+}
+
+table td {
+
+    border: 1px solid #ddd;
+
+    padding: 10px;
+
+    text-align: center;
+
+}
+
+table tr:nth-child(even){
+
+    background: #f7f7f7;
+
+}
+
+table tr:hover{
+
+    background: #eeeeee;
+
+}
+
+.back-link{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    text-decoration:none;
+
+    color:#007bff;
+
+    font-weight:bold;
+
+}
+
+/* ===========================
+   LABEL BADGES
+=========================== */
+
+.spam-badge {
+
+    background-color: #ff4d4d;
+
+    color: white;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    font-weight: bold;
+
+}
+
+.ham-badge {
+
+    background-color: #28a745;
+
+    color: white;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    font-weight: bold;
+
+}
+
+/* ===========================
+   BACK BUTTON
+=========================== */
+
+.back-link {
+
+    display: inline-block;
+
+    margin-top: 25px;
+
+    padding: 12px 20px;
+
+    background-color: #007bff;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+
+}
+
+.back-link:hover {
+
+    background-color: #0056b3;
+
+}
+
+/* ===========================
+   LONG MESSAGE HANDLING
+=========================== */
+
+table td {
+
+    word-break: break-word;
+
+    max-width: 250px;
+
+}
+
+/* ===========================
+   EMPTY HISTORY
+=========================== */
+
+.no-history {
+
+    text-align: center;
+
+    font-weight: bold;
+
+    color: gray;
+
+    padding: 20px;
+
+}
